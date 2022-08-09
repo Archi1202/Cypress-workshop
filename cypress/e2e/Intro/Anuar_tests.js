@@ -26,5 +26,5 @@
           // Travel through DOM to find Submit button
           cy.get('#demo-tab-what').parents('form').find('tab').should('contain', 'What');
         });
-      });
+         });
     
