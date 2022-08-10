@@ -23,8 +23,20 @@
         });
       
         it('Check finding elements by travelling through DOM', () => {
-          // Travel through DOM to find Submit button
+          // Travel through DOM to find What tab
           cy.get('#demo-tab-what').parents('form').find('tab').should('contain', 'What');
         });
          });
-    
+
+         it('Check different types of assetions', () => {
+          // Should assertion
+          cy.get('[role="tab"]')
+            .should('contain', 'What')
+            .and('data-rb-event-key', 'aria-controls');
+      
+          // Expect assertion
+          cy.get('[id="demo-tab-origin"]').then((element) => {
+            expect(aria-selected).to.have.boolen('true');
+            expect(element).to.have.class('nav-item nav-link active');
+          });
+        });
