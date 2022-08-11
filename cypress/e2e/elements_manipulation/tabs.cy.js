@@ -2,7 +2,7 @@
 
 describe('Locators: Get elements from Tabs section', () => {
   beforeEach('Navigate to test tabs section', () => {
-    cy.visit('https://demoqa.com/tabs');
+    cy.visit('/tabs');
   });
   it('Check tabs', () => {
     // By id
