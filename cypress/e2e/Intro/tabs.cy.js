@@ -20,5 +20,8 @@ describe('Locators: Get elements from Tabs section', () => {
       expect(element).to.have.text('What');
       expect(element).to.have.class('nav-item nav-link active');
     });
+    cy.get('#demo-tab-more').then((element1) => {
+      expect(element1).to.have.text('More');
+    });
   });
 });
